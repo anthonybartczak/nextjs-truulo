@@ -28,7 +28,10 @@ const Home: NextPage = () => {
             </div>
           </div>
           <video className="video-section" autoPlay loop muted playsInline>
-            <source src="/truulo_reel.mp4" type="video/mp4" />
+            <source
+              src="https://res.cloudinary.com/dxoib26g8/video/upload/v1665836473/truulo_reel_kg9198.mp4"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </section>
