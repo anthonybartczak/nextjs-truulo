@@ -1,6 +1,7 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 const navigation = [
   { name: "O nas", href: "#", current: true },
@@ -18,7 +19,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="sticky top-0 z-50 bg-gray-50">
       {({ open }: any) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -33,13 +34,17 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch md:justify-between">
                 <div className="flex flex-shrink-0 items-center">
-                  <Image
-                    width={132}
-                    height={35}
-                    className="hidden h-8 w-auto lg:block"
-                    src="/truulo_logo.webp"
-                    alt="Truulo Logo"
-                  />
+                  <Link href="/" passHref>
+                    <a>
+                      <Image
+                        width={132}
+                        height={35}
+                        className="hidden h-8 w-auto lg:block"
+                        src="/truulo_logo.webp"
+                        alt="Truulo Logo"
+                      />
+                    </a>
+                  </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex gap-2">
