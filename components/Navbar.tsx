@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
-  { name: "O nas", href: "#", current: true },
-  { name: "Oferta", href: "#", current: false },
-  { name: "Realizacje", href: "#", current: false },
-  { name: "Kontakt", href: "#", current: false },
+  { name: "O nas", href: "#o-nas", current: true },
+  { name: "Oferta", href: "#oferta", current: false },
+  { name: "Realizacje", href: "#realizacje", current: false },
+  { name: "Kontakt", href: "#kontakt", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -16,7 +16,7 @@ function classNames(...classes: string[]) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="sticky top-0 z-50 bg-gray-50">
+    <Disclosure as="nav" className="top-0 z-50 snap-start bg-gray-50">
       {({ open }: any) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
@@ -78,9 +78,9 @@ export default function Navbar() {
                   href={item.href}
                   className={classNames(
                     item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-base font-medium"
+                      ? "text-brandDarkPurple-500"
+                      : "text-gray-300 hover:bg-brandDarkPurple-500 hover:text-white",
+                    "block px-3 py-2 text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >

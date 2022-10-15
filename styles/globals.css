@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .snap {
+    scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
+  }
+  .snap-y {
+    --scroll-snap-direction: y;
+  }
+  .snap-mandatory {
+    --scroll-snap-constraint: mandatory;
+  }
+  .snap-start {
+    scroll-snap-align: start;
+  }
+}
+
 html,
 body {
   width: 100%;
@@ -15,12 +30,14 @@ body {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-Image,
-img,
-embed,
-object,
-video {
-  max-width: 100%;
+.video-section {
+  @apply absolute z-10 min-h-full w-auto min-w-full max-w-none;
+}
+
+.hero-text-gradient {
+  @apply bg-gradient-to-r
+  from-brandLightPink-400 to-brandDarkPink-600
+  bg-clip-text p-1 font-extrabold text-transparent 2xl:p-2;
 }
 
 a {
