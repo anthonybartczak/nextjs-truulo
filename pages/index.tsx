@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <main className="">
-        <section className="relative mt-16 flex h-screen snap-start items-center justify-center overflow-hidden font-bold">
+        <section className="relative flex h-screen snap-start items-center justify-center overflow-hidden font-bold">
           <div className="relative z-30 mx-12 flex flex-col items-center justify-center bg-gray-50 bg-opacity-80 p-12 text-center text-4xl md:text-4xl xl:text-6xl">
             <span className="p-1 text-black">Wizualizacje</span>
             <span className="hero-text-gradient">dla Twojej firmy.</span>
@@ -44,17 +44,15 @@ const Home: NextPage = () => {
               src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
             />
           </div>
-          <div className="order-first h-1/2 bg-brandLightPink-100 px-2 pt-6 md:h-screen md:w-1/2 md:px-12 xl:pt-20">
+          <div className="order-first h-1/2 bg-brandLightPink-100 px-2 pt-20 md:h-screen md:w-1/2 md:px-12 xl:pt-20">
             <h1 className="text-2xl">O nas</h1>
-            <p className="pt-6 text-justify	">
+            <p className="pt-4 text-justify	">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Recusandae illo possimus inventore accusamus! Eius vitae sed,
               quaerat magni voluptatum quisquam reiciendis dolorem dignissimos
               similique ad sapiente ipsam neque consequatur eos. Lorem ipsum
               dolor sit amet consectetur, adipisicing elit. Recusandae illo
-              possimus inventore accusamus! Eius vitae sed, quaerat magni
-              voluptatum quisquam reiciendis dolorem dignissimos similique ad
-              sapiente ipsam neque consequatur eos.
+              possimus inventore accusamus!
             </p>
           </div>
         </section>
