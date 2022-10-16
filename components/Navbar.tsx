@@ -2,12 +2,13 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const navigation = [
-  { name: "O nas", href: "#o-nas", current: true },
+  { name: "O nas", href: "#o-nas", current: false },
   { name: "Oferta", href: "#oferta", current: false },
   { name: "Realizacje", href: "#realizacje", current: false },
-  { name: "Kontakt", href: "#kontakt", current: false },
+  { name: "Kontakt", href: "/kontakt", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -15,6 +16,7 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
+  const router = useRouter();
   return (
     <Disclosure as="nav" className="sticky top-0 z-50 bg-gray-50">
       {({ open }: any) => (
@@ -47,23 +49,44 @@ export default function Navbar() {
                   </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex gap-2">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "border-brandDarkPurple-500 text-brandDarkPurple-500"
-                            : "text-gray-400 hover:border-brandLightPurple-500 hover:text-brandLightPurple-500",
-                          "duration-150; border-b-2 px-3 py-2 text-xl transition-all ease-linear"
-                        )}
-                        aria-current={item.current ? "page" : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
+                  <ul className="flex gap-2">
+                    <li
+                      className={
+                        router.asPath == "/#o-nas"
+                          ? "nav-link-active"
+                          : "nav-link"
+                      }
+                    >
+                      <Link href="#o-nas">O nas</Link>
+                    </li>
+                    <li
+                      className={
+                        router.asPath == "/#oferta"
+                          ? "nav-link-active"
+                          : "nav-link"
+                      }
+                    >
+                      <Link href="#oferta">Oferta</Link>
+                    </li>
+                    <li
+                      className={
+                        router.asPath == "/#realizacje"
+                          ? "nav-link-active"
+                          : "nav-link"
+                      }
+                    >
+                      <Link href="#realizacje">Realizacje</Link>
+                    </li>
+                    <li
+                      className={
+                        router.asPath == "/#kontakt"
+                          ? "nav-link-active"
+                          : "nav-link"
+                      }
+                    >
+                      <Link href="#kontakt">Kontakt</Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -79,7 +102,7 @@ export default function Navbar() {
                   className={classNames(
                     item.current
                       ? "text-brandDarkPurple-500"
-                      : "text-gray-300 hover:bg-brandDarkPurple-500 hover:text-white",
+                      : "text-black hover:bg-brandDarkPurple-500 hover:text-white",
                     "block px-3 py-2 text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
