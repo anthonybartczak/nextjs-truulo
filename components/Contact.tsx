@@ -21,14 +21,6 @@ export default function Contact() {
       messageContent,
     };
 
-    if (submitted) {
-      setSubmitted(true);
-      setFirstName("");
-      setLastName("");
-      setEmailAddress("");
-      setMessageContent("");
-    }
-
     fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -38,17 +30,25 @@ export default function Contact() {
       body: JSON.stringify(data),
     }).then((res) => {
       if (res.status === 200) {
+        setSubmitted(true);
+        setFirstName("");
+        setLastName("");
+        setEmailAddress("");
+        setMessageContent("");
         setIsOpen(true);
       }
     });
   };
 
   return (
-    <section id="kontakt" className="flex h-screen snap-start">
+    <section
+      id="kontakt"
+      className="svg-background-mesh flex h-screen snap-start"
+    >
       <div className="mx-2 my-auto md:m-auto">
         <form
           id="contact-form"
-          className="items-center justify-center bg-gray-50 px-8 pt-12 pb-1 shadow-xl"
+          className=" items-center justify-center bg-gray-50 p-12 opacity-100 shadow-2xl shadow-brandIndigo-300"
         >
           <div className="-mx-3 flex flex-wrap">
             <div className="w-full px-3 md:mb-0 md:w-1/2">
@@ -62,6 +62,7 @@ export default function Contact() {
                 onChange={(e) => {
                   setFirstName(e.target.value);
                 }}
+                value={firstName}
                 className="mr-3 w-full
                         appearance-none border-b border-gray-800 bg-transparent p-4 leading-tight text-gray-700 focus:bg-gray-200
                         focus:outline-none"
@@ -82,6 +83,7 @@ export default function Contact() {
                 onChange={(e) => {
                   setLastName(e.target.value);
                 }}
+                value={lastName}
                 className="mr-3 w-full
                         appearance-none border-b border-gray-800 bg-transparent p-4 leading-tight text-gray-700 focus:bg-gray-200
                         focus:outline-none"
@@ -103,6 +105,7 @@ export default function Contact() {
                 onChange={(e) => {
                   setEmailAddress(e.target.value);
                 }}
+                value={emailAddress}
                 className="mr-3
                         w-full appearance-none border-b border-gray-800 bg-transparent p-4 leading-tight text-gray-700
                         focus:bg-gray-200 focus:outline-none"
@@ -124,6 +127,7 @@ export default function Contact() {
                 onChange={(e) => {
                   setMessageContent(e.target.value);
                 }}
+                value={messageContent}
                 rows={6}
                 className="mr-3 w-full appearance-none border-b border-gray-800 bg-transparent p-4 leading-tight text-gray-700 focus:bg-gray-200 focus:outline-none"
                 placeholder="Twoja wiadomość."
