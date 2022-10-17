@@ -53,7 +53,7 @@ export default function Contact() {
           <div className="-mx-3 flex flex-wrap">
             <div className="w-full px-3 md:mb-0 md:w-1/2">
               <label
-                className="mb-1 block text-xs font-bold uppercase tracking-wide text-gray-700"
+                className="mb-1 block text-xs uppercase tracking-wide text-gray-700"
                 htmlFor="grid-first-name"
               >
                 Imię
@@ -74,7 +74,7 @@ export default function Contact() {
             </div>
             <div className="w-full px-3 md:w-1/2">
               <label
-                className="mb-1 block text-xs font-bold uppercase tracking-wide text-gray-700"
+                className="mb-1 block text-xs uppercase tracking-wide text-gray-700"
                 htmlFor="grid-last-name"
               >
                 Nazwisko
@@ -96,7 +96,7 @@ export default function Contact() {
           <div className="-mx-3 mb-6 flex flex-wrap">
             <div className="w-full px-3">
               <label
-                className="my-5 mb-1 block text-xs font-bold uppercase tracking-wide text-gray-700"
+                className="my-5 mb-1 block text-xs uppercase tracking-wide text-gray-700"
                 htmlFor="grid-email-address"
               >
                 Adres email
@@ -118,7 +118,7 @@ export default function Contact() {
           <div className="-mx-3 mb-1 flex flex-wrap">
             <div className="w-full px-3">
               <label
-                className="my-5 mb-1 block text-xs font-bold uppercase tracking-wide text-gray-700"
+                className="my-5 mb-1 block text-xs uppercase tracking-wide text-gray-700"
                 htmlFor="grid-message-content"
               >
                 Wiadomość
@@ -141,7 +141,7 @@ export default function Contact() {
                   handleSubmit(e);
                 }}
                 id="contact-submit"
-                className="focus:shadow-outline my-2 bg-gray-800 py-1.5 px-5 font-bold
+                className="focus:shadow-outline my-2 bg-gray-800 py-1.5 px-5
                 text-white shadow transition ease-linear hover:bg-brandDarkPink-600 focus:outline-none"
                 type="submit"
               >
