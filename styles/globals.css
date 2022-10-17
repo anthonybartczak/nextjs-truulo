@@ -41,6 +41,9 @@ body {
   background-position: center;
   background-size: cover;
   background-position: center center;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 .about-us-image {
@@ -49,6 +52,9 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 .video-section {
