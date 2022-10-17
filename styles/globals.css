@@ -34,7 +34,7 @@ body {
   font-family: Montserrat;
 }
 
-@supports (background-attachment: fixed) {
+@supports not (-webkit-touch-callout: none) {
   .offers-image {
     background-attachment: fixed;
   }
@@ -48,9 +48,6 @@ body {
   background-image: url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1844&q=80");
   background-position: center;
   background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
 }
 
 .about-us-image {
@@ -58,9 +55,6 @@ body {
   background-image: url("https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
   background-position: center;
   background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
 }
 
 .video-section {
