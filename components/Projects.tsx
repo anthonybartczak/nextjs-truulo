@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Projects() {
   return (
     <section
-      id="oferta"
+      id="realizacje"
       className="flex h-screen snap-start flex-col bg-brandIndigo-100 text-justify md:flex-row"
     >
       <div className="offers-image relative order-first h-1/2 md:h-screen md:w-1/2" />
