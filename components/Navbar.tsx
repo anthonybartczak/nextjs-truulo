@@ -18,7 +18,7 @@ function classNames(...classes: string[]) {
 export default function Navbar() {
   const router = useRouter();
   return (
-    <Disclosure as="nav" className="sticky top-0 z-50 bg-gray-50">
+    <Disclosure as="nav" className="z-50 bg-gray-50">
       {({ open }: any) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">

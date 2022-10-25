@@ -7,7 +7,7 @@ export default function Projects() {
       id="realizacje"
       className="flex h-screen snap-start flex-col bg-brandIndigo-100 text-justify md:flex-row"
     >
-      <div className="offers-image relative order-first h-1/2 md:h-screen md:w-1/2" />
+      <div className="projects-image relative order-first h-1/2 md:h-screen md:w-1/2" />
       <div className="h-1/2 px-2 pt-4 md:h-screen md:w-1/2 md:px-12">
         <h1 className="text-2xl">Realizacje</h1>
         <p className="pt-4 text-justify	">

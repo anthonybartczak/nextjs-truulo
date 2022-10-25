@@ -35,23 +35,22 @@ body {
 }
 
 @supports not (-webkit-touch-callout: none) {
-  .offers-image,
+  .projects-image,
   .about-us-image {
-    background-attachment: none;
+    background-attachment: fixed;
   }
 }
 
-@supports (-webkit-touch-callout: none) {
-  .h-screen {
-    height: -webkit-fill-available;
-  }
+.videoInsert {
+  object-fit: fill;
 }
 
-.offers-image {
+.projects-image {
   background-repeat: no-repeat;
   background-image: url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1844&q=80");
   background-position: center;
   background-size: cover;
+  @apply h-1/2 md:h-screen md:w-1/2;
 }
 
 .about-us-image {
@@ -59,10 +58,15 @@ body {
   background-image: url("https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
   background-position: center;
   background-size: cover;
+  @apply h-1/2 md:h-screen md:w-1/2;
 }
 
-.video-section {
-  @apply h-1/2 w-full md:h-full md:w-1/2;
+.video-section-vid {
+  @apply flex h-1/2 w-full md:h-full md:w-1/2;
+}
+
+.video-section-text {
+  @apply h-1/2 px-2 pt-4 md:h-screen md:w-1/2 md:px-12;
 }
 
 .hero-text-gradient {

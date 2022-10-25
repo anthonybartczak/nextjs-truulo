@@ -45,10 +45,10 @@ export default function Contact() {
       id="kontakt"
       className="svg-background-mesh flex h-screen snap-start"
     >
-      <div className="mx-2 my-auto md:m-auto">
+      <div className="my-2 mx-2 md:m-auto md:my-auto">
         <form
           id="contact-form"
-          className=" items-center justify-center bg-gray-50 p-12 opacity-100 shadow-2xl shadow-brandIndigo-300"
+          className="items-center justify-center bg-gray-50 p-12 opacity-100 shadow-2xl shadow-brandIndigo-300"
         >
           <div className="-mx-3 flex flex-wrap">
             <div className="w-full px-3 md:mb-0 md:w-1/2">
