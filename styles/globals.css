@@ -35,11 +35,15 @@ body {
 }
 
 @supports not (-webkit-touch-callout: none) {
-  .offers-image {
-    background-attachment: fixed;
-  }
+  .offers-image,
   .about-us-image {
-    background-attachment: fixed;
+    background-attachment: none;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height: -webkit-fill-available;
   }
 }
 
@@ -58,7 +62,7 @@ body {
 }
 
 .video-section {
-  @apply absolute z-10 min-h-full w-auto min-w-full max-w-none;
+  @apply h-1/2 w-full md:h-full md:w-1/2;
 }
 
 .hero-text-gradient {
