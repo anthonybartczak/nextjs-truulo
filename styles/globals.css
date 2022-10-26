@@ -41,8 +41,10 @@ body {
   }
 }
 
-.videoInsert {
-  object-fit: fill;
+@supports not (-webkit-touch-callout: none) {
+  .video-element {
+    position: fixed;
+  }
 }
 
 .projects-image {
@@ -61,11 +63,19 @@ body {
   @apply h-1/2 md:h-screen md:w-1/2;
 }
 
+.video-element {
+  z-index: -999;
+  object-fit: fill;
+  top: 0;
+  @apply md:h-full md:w-1/2;
+}
+
 .video-section-vid {
-  @apply flex h-1/2 w-full md:h-full md:w-1/2;
+  @apply relative flex h-1/2 w-full md:h-full md:w-1/2;
 }
 
 .video-section-text {
+  z-index: 1;
   @apply h-1/2 px-2 pt-4 md:h-screen md:w-1/2 md:px-12;
 }
 

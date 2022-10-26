@@ -3,12 +3,18 @@ import Link from "next/link";
 
 export default function AboutUs() {
   return (
-    <section
-      id="o-nas"
-      className="flex h-screen snap-start flex-col bg-brandLightPink-100 text-justify md:flex-row"
-    >
-      <div className="about-us-image order-last" />
-      <div className="h-1/2 px-2 pt-4 md:h-screen md:w-1/2 md:px-12">
+    <section className="relative flex h-screen snap-start flex-col overflow-hidden md:flex-row">
+      <div className="video-section-vid order-last">
+        <video className="video-element" autoPlay loop muted playsInline>
+          <source
+            // src="https://res.cloudinary.com/dxoib26g8/video/upload/v1666679191/truulo_reel_m2mawr.mp4"
+            src="truulo_reel_about_us.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div className="video-section-text bg-gray-50">
         <h1 className="text-2xl">O nas</h1>
         <p className="pt-4 text-justify	">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
