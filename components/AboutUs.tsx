@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AboutUs() {
   return (
-    <section className="relative flex h-screen snap-start flex-col overflow-hidden md:flex-row">
+    <section className="section-height relative flex snap-start flex-col overflow-hidden md:flex-row">
       <div className="video-section-vid order-last">
         <video className="video-element" autoPlay loop muted playsInline>
           <source
