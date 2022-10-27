@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative flex h-screen snap-start flex-row overflow-hidden bg-gray-50">
       <div className="hero-section-cta">
         <div className="relative h-screen w-0 md:w-1/2"></div>
-        <div className="relative flex flex-col items-center justify-center place-self-center bg-gray-50 bg-opacity-70 p-5">
+        <div className="relative flex w-full flex-col items-center justify-center place-self-center bg-gray-50 bg-opacity-70 p-5 md:w-1/2">
           <span className="text-black">Twoja inwestycja</span>
           <span className="hero-text-gradient">w nowoczesnej odsłonie.</span>
           <div>

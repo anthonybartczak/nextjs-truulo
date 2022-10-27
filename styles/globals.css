@@ -35,13 +35,13 @@ body {
 
 @supports not (-webkit-touch-callout: none) {
   .video-element {
-    position: static;
+    position: fixed;
   }
 }
 
 .hero-section-cta {
   @apply absolute z-30 flex h-screen w-full flex-row justify-center place-self-center
-  text-center text-4xl md:content-center xl:text-4xl;
+  text-center text-2xl md:content-center xl:text-4xl;
 }
 
 .hero-section-vid-m {
@@ -68,14 +68,14 @@ body {
 }
 
 .video-section-vid {
-  @apply relative flex h-1/2 w-full md:h-full md:w-1/2;
+  @apply relative h-1/2 w-full md:h-screen md:w-1/2;
 }
 
 .video-element {
   z-index: -999;
-  object-fit: fill;
   top: 0;
-  @apply md:h-full md:w-1/2;
+  object-fit: fill;
+  @apply relative object-cover md:fixed md:h-full md:object-cover;
 }
 
 .video-section-text {
@@ -85,7 +85,7 @@ body {
 
 .hero-text-gradient {
   @apply bg-gradient-to-r
-  from-brandLightPink-400 to-brandIndigo-500
+  from-brandLightPink-500 to-brandIndigo-500
   bg-clip-text p-1 font-extrabold text-transparent 2xl:p-2;
 }
 
