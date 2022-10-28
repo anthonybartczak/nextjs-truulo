@@ -41,11 +41,16 @@ body {
 
 .hero-section-cta {
   @apply absolute z-30 flex h-screen w-full flex-row justify-center place-self-center
-  text-center text-2xl md:content-center xl:text-4xl;
+  text-center md:content-center xl:text-4xl;
+}
+
+.hero-section-cta-text {
+  @apply relative flex w-full flex-col items-center justify-center place-self-center
+  p-5 md:w-1/2;
 }
 
 .hero-section-vid-m {
-  @apply h-full w-1/2;
+  @apply h-full w-1/2 bg-white;
 }
 
 .hero-section-vid-d {
@@ -59,7 +64,7 @@ body {
 }
 
 .hero-section-bg-m {
-  @apply h-full w-1/2 bg-gray-50;
+  @apply h-full w-1/2 bg-brandDarkPurple-900;
 }
 
 .hero-section-bg-d {
@@ -80,13 +85,13 @@ body {
 
 .video-section-text {
   z-index: 1;
-  @apply h-1/2 px-2 pt-4 md:h-screen md:w-1/2 md:px-12;
+  @apply h-1/2 bg-gray-50 px-2 pt-4 md:h-screen md:w-1/2 md:px-12 md:pt-20;
 }
 
 .hero-text-gradient {
-  @apply bg-gradient-to-r
-  from-brandLightPink-500 to-brandIndigo-500
-  bg-clip-text p-1 font-extrabold text-transparent 2xl:p-2;
+  @apply bg-gradient-to-r from-brandLightPink-200 via-brandDarkPurple-200 to-blue-300
+  bg-clip-text p-1
+  text-4xl font-extrabold text-transparent 2xl:p-2;
 }
 
 .hero-cta {
@@ -98,7 +103,7 @@ body {
 }
 
 .nav-link {
-  @apply border-b-2 px-3 py-2 text-lg text-black
+  @apply border-b-2 px-3 py-2 text-lg text-white
   transition-all duration-150 ease-linear
   hover:border-brandLightPurple-500 hover:text-brandLightPurple-500;
 }
