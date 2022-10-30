@@ -46,9 +46,9 @@ export default function Navbar() {
                     <a>
                       <Image
                         width={132}
-                        height={35}
+                        height={42}
                         className="hidden h-8 w-auto lg:block"
-                        src="/truulo_logo.webp"
+                        src="/truulo_logo_white.webp"
                         alt="Truulo Logo"
                       />
                     </a>

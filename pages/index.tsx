@@ -3,8 +3,8 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import AboutUs from "../components/AboutUs";
 import Hero from "../components/Hero";
-import Projects from "../components/Offers";
-import Offers from "../components/Projects";
+import Projects from "../components/Projects";
+import Offers from "../components/Offers";
 import Contact from "../components/Contact";
 
 const Home: NextPage = () => {
