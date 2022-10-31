@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Projects() {
   return (
     <section
-      id="projekty"
+      id="realizacje"
       className="flex h-screen snap-start flex-col overflow-hidden md:flex-row"
     >
       <div className="section-video-parent">
@@ -13,8 +13,8 @@ export default function Projects() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="section-text bg-gray-50 md:order-first">
-        <h1 className="text-2xl">O nas</h1>
+      <div className="section-text md:order-first">
+        <h1 className="text-2xl">_realizacje</h1>
         <p className="pt-2 text-justify	">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
           illo possimus inventore accusamus! Eius vitae sed, quaerat magni

@@ -5,10 +5,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const navigation = [
-  { name: "O nas", href: "#o-nas", current: false },
-  { name: "Oferta", href: "#oferta", current: false },
-  { name: "Realizacje", href: "#realizacje", current: false },
-  { name: "Kontakt", href: "#kontakt", current: false },
+  { name: "_o nas", href: "#o-nas", current: false },
+  { name: "_oferta", href: "#oferta", current: false },
+  { name: "_realizacje", href: "#realizacje", current: false },
+  { name: "_kontakt", href: "#kontakt", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -25,7 +25,7 @@ export default function Navbar() {
             <div className="relative flex h-14 items-center justify-between md:h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="ml-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-brandDarkPurple-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brandDarkPurple-500">
+                <Disclosure.Button className="ml-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-brandNavy-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brandNavy-300">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon
@@ -40,7 +40,8 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="mx-auto flex flex-1 items-center justify-end px-4 sm:items-stretch sm:px-6 md:justify-between lg:px-8">
+              {/* Desktop version of the navbar */}
+              <div className="mx-auto flex h-full flex-1 items-center justify-end bg-gradient-to-b from-brandNavy-500 px-4 sm:items-stretch sm:px-6 md:justify-between lg:px-8">
                 <div className="flex flex-shrink-0 items-center">
                   <Link href="/" passHref>
                     <a>
@@ -56,41 +57,17 @@ export default function Navbar() {
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <ul className="flex gap-2">
-                    <li
-                      className={
-                        router.asPath == "/#o-nas"
-                          ? "nav-link-active"
-                          : "nav-link"
-                      }
-                    >
-                      <Link href="#o-nas">O nas</Link>
+                    <li className="nav-link">
+                      <Link href="#o-nas">_o nas</Link>
                     </li>
-                    <li
-                      className={
-                        router.asPath == "/#oferta"
-                          ? "nav-link-active"
-                          : "nav-link"
-                      }
-                    >
-                      <Link href="#oferta">Oferta</Link>
+                    <li className="nav-link">
+                      <Link href="#oferta">_oferta</Link>
                     </li>
-                    <li
-                      className={
-                        router.asPath == "/#realizacje"
-                          ? "nav-link-active"
-                          : "nav-link"
-                      }
-                    >
-                      <Link href="#realizacje">Realizacje</Link>
+                    <li className="nav-link">
+                      <Link href="#realizacje">_realizacje</Link>
                     </li>
-                    <li
-                      className={
-                        router.asPath == "/#kontakt"
-                          ? "nav-link-active"
-                          : "nav-link"
-                      }
-                    >
-                      <Link href="#kontakt">Kontakt</Link>
+                    <li className="nav-link">
+                      <Link href="#kontakt">_kontakt</Link>
                     </li>
                   </ul>
                 </div>
@@ -98,8 +75,8 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="bg-gray-50 sm:hidden">
-            <div className="space-y-1 px-2 pt-2 pb-3">
+          <Disclosure.Panel className="mx-2 rounded-b-md bg-brandNavy-300 transition-all duration-150 ease-linear sm:hidden">
+            <div className="space-y-1 px-2 py-2">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -107,8 +84,8 @@ export default function Navbar() {
                   href={item.href}
                   className={classNames(
                     item.current
-                      ? "text-brandDarkPurple-500"
-                      : "text-black hover:bg-brandDarkPurple-500 hover:text-white",
+                      ? "text-brandNavy-100"
+                      : "text-gray-50 hover:bg-brandNavy-100 hover:text-white",
                     "block px-3 py-2 text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}

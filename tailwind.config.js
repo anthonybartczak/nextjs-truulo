@@ -6,6 +6,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: { sans: ["Montserrat", "sans-serif"] },
     extend: {
       colors: {
         // 500 is the default
@@ -74,6 +75,11 @@ module.exports = {
           700: "#002b55",
           800: "#001d38",
           900: "#000e1c",
+        },
+        brandNavy: {
+          100: "#202D3E",
+          300: "#1C2635",
+          500: "#11161F",
         },
       },
       animation: {

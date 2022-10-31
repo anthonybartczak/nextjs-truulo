@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.ico" />

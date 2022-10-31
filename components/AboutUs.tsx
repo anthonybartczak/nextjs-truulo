@@ -2,7 +2,7 @@ export default function AboutUs() {
   return (
     <section
       id="o-nas"
-      className="flex h-screen snap-start flex-col overflow-hidden md:flex-row"
+      className="relative flex h-screen snap-start flex-col overflow-hidden md:flex-row "
     >
       <div className="section-video-parent">
         <video className="section-video-child" autoPlay loop muted playsInline>
@@ -10,15 +10,11 @@ export default function AboutUs() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="section-text bg-gray-50 md:order-first">
-        <h1 className="text-2xl">O nas</h1>
+      <div className="section-text md:order-first">
+        <h1 className="text-2xl">_o nas</h1>
         <p className="pt-2 text-justify	">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
-          illo possimus inventore accusamus! Eius vitae sed, quaerat magni
-          voluptatum quisquam reiciendis dolorem dignissimos similique ad
-          sapiente ipsam neque consequatur eos. Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Recusandae illo possimus inventore
-          accusamus!
+          Truulo powstlo na bazie wieloletnich doświadczeń w branży filmowej
+          oraz reklamowej. Realizowaliśmy reklamy dla taich firm jak Profit
         </p>
       </div>
     </section>

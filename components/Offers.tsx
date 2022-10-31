@@ -10,8 +10,8 @@ export default function Offers() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="section-text bg-gray-50">
-        <h1 className="text-2xl">Oferta</h1>
+      <div className="section-text">
+        <h1 className="text-2xl">_oferta</h1>
         <p className="pt-2 text-justify	">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
           illo possimus inventore accusamus! Eius vitae sed, quaerat magni
