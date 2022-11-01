@@ -2,13 +2,12 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 const navigation = [
-  { name: "_o nas", href: "#o-nas", current: false },
-  { name: "_oferta", href: "#oferta", current: false },
-  { name: "_realizacje", href: "#realizacje", current: false },
-  { name: "_kontakt", href: "#kontakt", current: false },
+  { name: "O nas", href: "#o-nas", current: false },
+  { name: "Oferta", href: "#oferta", current: false },
+  { name: "Realizacje", href: "#realizacje", current: false },
+  { name: "Kontakt", href: "#kontakt", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -16,7 +15,6 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
-  const router = useRouter();
   return (
     <Disclosure as="nav" className="absolute z-50 w-full snap-start">
       {({ open }: any) => (
@@ -43,7 +41,7 @@ export default function Navbar() {
               {/* Desktop version of the navbar */}
               <div className="mx-auto flex h-full flex-1 items-center justify-end bg-gradient-to-b from-brandNavy-500 px-4 sm:items-stretch sm:px-6 md:justify-between lg:px-8">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link href="/" passHref>
+                  <Link href="#home" passHref>
                     <a>
                       <Image
                         width={132}

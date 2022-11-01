@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section
       id="realizacje"
-      className="flex h-screen snap-start flex-col overflow-hidden md:flex-row"
+      className="flex h-screen snap-start flex-col overflow-hidden bg-gradient-to-b from-brandNavy-100 via-brandNavy-300 to-brandNavy-500 md:flex-row"
     >
       <div className="section-video-parent">
         <video className="section-video-child" autoPlay loop muted playsInline>
@@ -15,7 +15,7 @@ export default function Projects() {
       </div>
       <div className="section-text md:order-first">
         <h1 className="text-2xl">_realizacje</h1>
-        <p className="pt-2 text-justify	">
+        <p className="section-paragraph">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
           illo possimus inventore accusamus! Eius vitae sed, quaerat magni
           voluptatum quisquam reiciendis dolorem dignissimos similique ad

@@ -41,14 +41,11 @@ export default function Contact() {
   };
 
   return (
-    <section
-      id="kontakt"
-      className="svg-background-mesh flex h-screen snap-start"
-    >
-      <div className="flex items-center justify-center px-6 py-6">
+    <section id="kontakt" className="contact-section">
+      <div className="mt-12 flex items-center justify-center px-6 py-6 md:mt-0">
         <form
           id="contact-form"
-          className="bg-gray-50 p-8 opacity-100 shadow-2xl shadow-brandIndigo-300"
+          className="bg-gray-50 p-6 opacity-100 shadow-2xl shadow-brandIndigo-300 md:p-8"
         >
           <div className="-mx-3 flex flex-wrap">
             <div className="w-full px-3 md:mb-0 md:w-1/2">
@@ -141,8 +138,8 @@ export default function Contact() {
                   handleSubmit(e);
                 }}
                 id="contact-submit"
-                className="focus:shadow-outline my-2 bg-gray-800 py-1.5 px-5
-                text-white shadow transition ease-linear hover:bg-brandDarkPink-600 focus:outline-none"
+                className="focus:shadow-outline my-2 bg-brandNavy-500 py-1.5 px-5
+                text-white shadow transition ease-linear hover:bg-brandNavy-100 focus:outline-none"
                 type="submit"
               >
                 Wyślij
