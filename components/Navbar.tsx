@@ -17,7 +17,7 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
-  let [isOpen, setIsOpen] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
   return (
     <Disclosure as="nav" className="absolute z-50 w-full snap-start">
       <>
@@ -44,7 +44,12 @@ export default function Navbar() {
             </div>
             {/* Desktop version of the navbar */}
             <div className="mx-auto flex h-full flex-1 items-center justify-end bg-gradient-to-b from-brandNavy-500 px-4 sm:items-stretch sm:px-6 md:justify-between lg:px-12">
-              <div className="flex flex-shrink-0 items-center">
+              <motion.div
+                initial={{ x: 500, opacity: 0.7 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="flex flex-shrink-0 items-center"
+              >
                 <Link href="#home" passHref>
                   <a>
                     <Image
@@ -56,8 +61,13 @@ export default function Navbar() {
                     />
                   </a>
                 </Link>
-              </div>
-              <div className="hidden sm:ml-6 sm:block">
+              </motion.div>
+              <motion.div
+                initial={{ y: -50, opacity: 0.2 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="hidden sm:ml-6 sm:block"
+              >
                 <ul className="flex gap-2">
                   <li className="nav-link">
                     <Link href="#o-nas">_o nas</Link>
@@ -72,7 +82,7 @@ export default function Navbar() {
                     <Link href="#kontakt">_kontakt</Link>
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -82,9 +92,9 @@ export default function Navbar() {
               open={isOpen}
               static
               as={motion.div}
-              initial={{ x: -300, opacity: 0.65 }}
+              initial={{ x: -300, opacity: 0.7 }}
               animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -300, opacity: 0.65 }}
+              exit={{ x: -300, opacity: 0.7 }}
               transition={{ duration: 1 }}
               onClose={() => setIsOpen(false)}
               className="fixed inset-0 z-30 overflow-y-auto md:hidden"
@@ -104,7 +114,7 @@ export default function Navbar() {
                           className={classNames(
                             item.current
                               ? "text-brandNavy-100"
-                              : "text-2xl text-gray-50 hover:bg-brandNavy-100 hover:text-white",
+                              : "text-xl text-gray-50 hover:bg-brandNavy-100 hover:text-white",
                             "block px-3 py-3 text-base font-medium transition-all duration-150 ease-linear hover:scale-110"
                           )}
                           aria-current={item.current ? "page" : undefined}
