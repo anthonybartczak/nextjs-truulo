@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function AboutUs() {
   return (
     <section
@@ -10,8 +12,18 @@ export default function AboutUs() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="section-text md:order-first">
-        <h1 className="text-2xl font-semibold">_o nas</h1>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, type: "linear" }}
+        variants={{
+          visible: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}
+        className="section-text md:order-first"
+      >
+        <h1 className="text-4xl font-semibold md:text-3xl">_o nas</h1>
         <p className="section-paragraph">
           Truulo powstlo na bazie wieloletnich doświadczeń w branży filmowej
           oraz reklamowej. Realizowaliśmy reklamy dla taich firm jak Profit
@@ -19,7 +31,7 @@ export default function AboutUs() {
           oraz prezentacji inwestycji tak by w jak najbardziej efektowny i
           przejrzysty sposób zaprezentować ją Państwa odbiorcom.
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 }

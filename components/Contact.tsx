@@ -42,7 +42,7 @@ export default function Contact() {
 
   return (
     <section id="kontakt" className="contact-section">
-      <div className="mt-12 flex items-center justify-center px-6 py-6 md:mt-0">
+      <div className="mt-8 flex items-center justify-center px-3 py-6 md:mt-0">
         <form
           id="contact-form"
           className="bg-gray-50 p-6 opacity-100 shadow-2xl shadow-brandIndigo-300 md:p-8"

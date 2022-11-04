@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Offers() {
   return (
@@ -12,19 +13,29 @@ export default function Offers() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="section-text">
-        <h1 className="text-2xl font-semibold">_oferta</h1>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, type: "linear" }}
+        variants={{
+          visible: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}
+        className="section-text"
+      >
+        <h1 className="text-3xl font-semibold md:text-3xl">_oferta</h1>
         <p className="section-paragraph">
           Profesjonalnie zajmujemy się kompleksową produkcją video z inwestycji,
           organizacją planu filmowego, zaawansowaną animacją i wizualizacją oraz
           postprodukcją obrazu i dźwięku.
         </p>
         <Link href="" passHref>
-          <button className="mt-4 bg-brandDarkBlue-100 bg-opacity-20 py-1 px-2 transition ease-linear hover:scale-105">
+          <button className="mt-4 bg-brandDarkBlue-100 bg-opacity-20 py-1 px-2 shadow-md transition ease-linear hover:scale-105">
             <span className="text-lg">Pobierz nasz cennik</span>
           </button>
         </Link>
-      </div>
+      </motion.div>
     </section>
   );
 }

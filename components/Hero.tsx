@@ -1,4 +1,5 @@
 import NextSectionArrow from "./NextSectionArrow";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -9,17 +10,27 @@ export default function Hero() {
       <div className="hero-section">
         <div className="relative h-screen w-0 bg-opacity-10 md:w-1/2" />
         <div className="relative flex w-full flex-col justify-center p-6 md:w-1/2 md:p-12">
-          <span className="text-left text-2xl font-semibold text-gray-50 md:text-3xl">
-            _Twoja inwestycja w nowym wymiarze.
-          </span>
-          <div className="pt-6 text-justify text-xl text-gray-50">
+          <div className="flex flex-col text-left text-3xl font-semibold text-gray-50 md:flex-row md:text-3xl">
+            <span>_Twoja inwestycja w nowym wymiarze.</span>
+          </div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, type: "linear" }}
+            variants={{
+              visible: { opacity: 1 },
+              hidden: { opacity: 0 },
+            }}
+            className="pt-6 text-justify text-xl text-gray-50"
+          >
             <p>
               Jak nikt inny kreatywnie postrzegamy proces powstawania inwestycji
               i dbamy by był atrakcyjny dla Twojego klienta.
             </p>
             <br />
             <p>Sprawdź naszą ofertę i zobacz co możemy dla Ciebie zrobić.</p>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="absolute h-screen w-1/2 bg-brandNavy-500 bg-opacity-50 md:bg-transparent" />

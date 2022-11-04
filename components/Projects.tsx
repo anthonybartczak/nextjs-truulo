@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
@@ -13,8 +12,18 @@ export default function Projects() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="section-text md:order-first">
-        <h1 className="text-2xl">_realizacje</h1>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, type: "linear" }}
+        variants={{
+          visible: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}
+        className="section-text md:order-first"
+      >
+        <h1 className="text-3xl font-semibold md:text-3xl">_realizacje</h1>
         <p className="section-paragraph">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
           illo possimus inventore accusamus! Eius vitae sed, quaerat magni
@@ -23,7 +32,7 @@ export default function Projects() {
           consectetur, adipisicing elit. Recusandae illo possimus inventore
           accusamus!
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 }
