@@ -6,12 +6,12 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap"
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className="bg-gray-100">
+      <body className="bg-brandNavy-500">
         <Main></Main>
         <NextScript />
       </body>

@@ -75,18 +75,19 @@ body {
   }
 }
 
+.section-text {
+  z-index: 1;
+  @apply flex h-0
+  flex-col px-3 py-6 text-gray-50 md:h-screen md:w-1/2 md:px-12 md:py-24;
+}
+
+.section-paragraph {
+  @apply pt-2 text-justify text-sm font-light xs:text-base md:text-2xl;
+}
+
 .section-video-parent {
   max-height: 50%;
   @apply w-full md:h-screen md:max-h-screen md:w-1/2;
-}
-
-.section-text {
-  z-index: 1;
-  @apply h-screen
-  px-3 py-6 text-gray-50 md:h-screen md:w-1/2 md:px-12 md:py-24;
-}
-.section-paragraph {
-  @apply pt-2 text-justify text-sm font-light xs:text-base md:text-2xl;
 }
 
 .section-video-child {
@@ -144,7 +145,7 @@ body {
 }
 
 .contact-section {
-  @apply flex min-h-screen snap-start justify-center bg-gradient-to-b from-brandNavy-500 via-brandNavy-300 to-brandNavy-100 text-sm xs:text-base;
+  @apply flex min-h-screen snap-start justify-center bg-gradient-to-b from-brandNavy-100 via-brandNavy-300 to-brandNavy-500 text-sm xs:text-base;
 }
 
 a {

@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <section
       id="realizacje"
-      className="flex h-screen snap-start flex-col overflow-hidden bg-gradient-to-b from-brandNavy-100 via-brandNavy-300 to-brandNavy-500 md:flex-row"
+      className="flex h-screen snap-start flex-col overflow-hidden bg-gradient-to-b from-brandNavy-500 via-brandNavy-300 to-brandNavy-100 md:flex-row"
     >
       <div className="section-video-parent">
         <video className="section-video-child" autoPlay loop muted playsInline>

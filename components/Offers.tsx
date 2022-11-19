@@ -31,8 +31,13 @@ export default function Offers() {
           postprodukcją obrazu i dźwięku.
         </p>
         <Link href="" passHref>
-          <button className="mt-4 bg-brandDarkBlue-100 bg-opacity-20 py-1 px-2 shadow-md transition ease-linear hover:scale-105">
+          <button className="mt-4 rounded-md bg-brandDarkBlue-100 bg-opacity-20 py-1 px-2 shadow-md transition ease-linear hover:scale-105">
             <span className="text-lg">Pobierz nasz cennik</span>
+          </button>
+        </Link>
+        <Link href="#demo" passHref>
+          <button className="mt-4 rounded-md bg-brandDarkBlue-100 bg-opacity-20 py-1 px-2 shadow-md transition ease-linear hover:scale-105">
+            <span className="text-lg">Zobacz nasze demo</span>
           </button>
         </Link>
       </motion.div>
