@@ -24,12 +24,12 @@ export default function AboutUs() {
         className="section-text md:order-first"
       >
         <h1 className="text-4xl font-semibold md:text-3xl">_o nas</h1>
-        <p className="section-paragraph">
-          Truulo powstlo na bazie wieloletnich doświadczeń w branży filmowej
-          oraz reklamowej. Realizowaliśmy reklamy dla taich firm jak Profit
-          Development czy Skanska. Kreatywnie postrzegamy proces powstawania
-          oraz prezentacji inwestycji tak by w jak najbardziej efektowny i
-          przejrzysty sposób zaprezentować ją Państwa odbiorcom.
+        <p className="section-paragraph md:text-xl">
+          W Trullo specjalizujemy się w przygotowaniu spotów wideo
+          przeznaczonych do marketingu i promocji dla klientów z rynku
+          nieruchomości. Doświadczony zespół pozwala w kreatywny sposób tworzyć
+          materiały wideo dopasowane do potrzeb naszych klientów. Realizowaliśmy
+          reklamy dla takich firm jak Profit Development czy Skanska.
         </p>
       </motion.div>
     </section>

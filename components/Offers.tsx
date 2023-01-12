@@ -25,10 +25,8 @@ export default function Offers() {
         className="section-text"
       >
         <h1 className="text-3xl font-semibold md:text-3xl">_oferta</h1>
-        <p className="section-paragraph">
-          Profesjonalnie zajmujemy się kompleksową produkcją video z inwestycji,
-          organizacją planu filmowego, zaawansowaną animacją i wizualizacją oraz
-          postprodukcją obrazu i dźwięku.
+        <p className="section-paragraph md:!text-xl">
+          Poznaj naszą ofertę lub napisz do nas jak możemy Ci pomóc.
         </p>
         <Link href="" passHref>
           <button className="mt-4 rounded-md bg-brandDarkBlue-100 bg-opacity-20 py-1 px-2 shadow-md transition ease-linear hover:scale-105">

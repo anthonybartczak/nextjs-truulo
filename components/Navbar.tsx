@@ -8,7 +8,7 @@ const navigation = [
   { name: "O NAS", href: "#o-nas", current: false },
   { name: "OFERTA", href: "#oferta", current: false },
   { name: "DEMO", href: "#demo", current: false },
-  { name: "REALIZACJE", href: "#realizacje", current: false },
+  { name: "SPRAWDŹ CO ZYSKASZ", href: "#realizacje", current: false },
   { name: "KONTAKT", href: "#kontakt", current: false },
 ];
 
@@ -112,7 +112,7 @@ export default function Navbar() {
                     <Link href="#demo">_demo</Link>
                   </li>
                   <li className="nav-link">
-                    <Link href="#realizacje">_realizacje</Link>
+                    <Link href="#realizacje">_sprawdź co zyskasz</Link>
                   </li>
                   <li className="nav-link">
                     <Link href="#kontakt">_kontakt</Link>

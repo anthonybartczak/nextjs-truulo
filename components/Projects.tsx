@@ -23,15 +23,25 @@ export default function Projects() {
         }}
         className="section-text md:order-first"
       >
-        <h1 className="text-3xl font-semibold md:text-3xl">_realizacje</h1>
-        <p className="section-paragraph">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
-          illo possimus inventore accusamus! Eius vitae sed, quaerat magni
-          voluptatum quisquam reiciendis dolorem dignissimos similique ad
-          sapiente ipsam neque consequatur eos. Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Recusandae illo possimus inventore
-          accusamus!
-        </p>
+        <h1 className="text-3xl font-semibold md:text-3xl">
+          _sprawdź co zyskasz
+        </h1>
+        <ol className="section-paragraph !text-left">
+          <li className="hover-underline-animation py-2">
+            1. Pomożemy Ci wybrać odpowiedni format wideo do promocji twojej
+            inwestycji.
+          </li>
+          <li className="hover-underline-animation py-2">
+            2. Stworzymy wysokiej jakości spoty wideo.
+          </li>
+          <li className="hover-underline-animation py-2">
+            3. Przygotujemy je różnych formatach w zależności od miejsca ich
+            prezentacji.
+          </li>
+          <li className="hover-underline-animation py-2">
+            4. Doradzimy Ci w wyborze strategii marketingowej dla Twojego wideo.
+          </li>
+        </ol>
       </motion.div>
     </section>
   );

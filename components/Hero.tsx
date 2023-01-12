@@ -9,7 +9,7 @@ export default function Hero() {
     >
       <div className="hero-section">
         <div className="relative h-screen w-0 bg-opacity-10 md:w-1/2" />
-        <div className="relative flex w-full flex-col justify-center p-6 md:w-1/2 md:p-12">
+        <div className="relative flex w-full flex-col justify-center px-6 md:w-1/2 md:p-12">
           <div className="flex flex-col text-left text-3xl font-semibold text-gray-50 md:flex-row md:text-3xl">
             <span>_Twoja inwestycja w nowym wymiarze.</span>
           </div>
@@ -25,8 +25,10 @@ export default function Hero() {
             className="pt-6 text-justify text-xl text-gray-50"
           >
             <p>
-              Jak nikt inny kreatywnie postrzegamy proces powstawania inwestycji
-              i dbamy by był atrakcyjny dla Twojego klienta.
+              W Trullo rozumiemy, że biznes wymaga dziś kreatywnego podejścia do
+              komunikacji z klientem. Spot wideo to doskonałe narzędzie
+              marketingowe i sprzedażowe. Tworzymy nowoczesne formy filmowe
+              wspierające proces sprzedaży nieruchomości.
             </p>
             <br />
             <p>Sprawdź naszą ofertę i zobacz co możemy dla Ciebie zrobić.</p>
