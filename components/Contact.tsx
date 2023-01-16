@@ -1,180 +1,84 @@
+import { Popover, Transition } from "@headlessui/react";
 import { useState } from "react";
-import { Dialog } from "@headlessui/react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
-export default function Contact() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [emailAddress, setEmailAddress] = useState("");
-  const [messageContent, setMessageContent] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+export default function Contact(this: any) {
+  let [isOpen, setIsOpen] = useState(true);
 
-  const isBrowser = typeof window !== "undefined";
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    console.log("Sending");
-    let data = {
-      firstName,
-      lastName,
-      emailAddress,
-      messageContent,
-    };
-
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.status === 200) {
-        setSubmitted(true);
-        setFirstName("");
-        setLastName("");
-        setEmailAddress("");
-        setMessageContent("");
-        setIsOpen(true);
-      }
-    });
-  };
+  function handleCopy() {
+    navigator.clipboard.writeText("k.chmielewskimail@gmail.com");
+    setIsOpen(true);
+  }
 
   return (
-    <section id="kontakt" className="contact-section">
-      <div className="mt-8 flex items-center justify-center px-3 py-6 md:mt-0">
-        <form
-          id="contact-form"
-          className="bg-gray-50 p-6 opacity-100 shadow-2xl shadow-brandIndigo-300 md:p-8"
-        >
-          <div className="-mx-3 flex flex-wrap">
-            <div className="w-full px-3 md:mb-0 md:w-1/2">
-              <label
-                className="mb-1 block text-xs uppercase tracking-wide text-gray-700"
-                htmlFor="grid-first-name"
-              >
-                Imię
-              </label>
-              <input
-                onChange={(e) => {
-                  setFirstName(e.target.value);
-                }}
-                value={firstName}
-                className="mr-3 w-full
-                        appearance-none border-b border-gray-800 bg-transparent p-4 leading-tight text-gray-700 focus:bg-gray-200
-                        focus:outline-none"
-                type="text"
-                placeholder="John"
-                aria-label="Full name"
-              />
-              <p className="mb-5 text-xs italic text-red-500"></p>
-            </div>
-            <div className="w-full px-3 md:w-1/2">
-              <label
-                className="mb-1 block text-xs uppercase tracking-wide text-gray-700"
-                htmlFor="grid-last-name"
-              >
-                Nazwisko
-              </label>
-              <input
-                onChange={(e) => {
-                  setLastName(e.target.value);
-                }}
-                value={lastName}
-                className="mr-3 w-full
-                        appearance-none border-b border-gray-800 bg-transparent p-4 leading-tight text-gray-700 focus:bg-gray-200
-                        focus:outline-none"
-                type="text"
-                placeholder="Doe"
-                aria-label="Full name"
-              />
-            </div>
-          </div>
-          <div className="-mx-3 mb-6 flex flex-wrap">
-            <div className="w-full px-3">
-              <label
-                className="my-5 mb-1 block text-xs uppercase tracking-wide text-gray-700"
-                htmlFor="grid-email-address"
-              >
-                Adres email
-              </label>
-              <input
-                onChange={(e) => {
-                  setEmailAddress(e.target.value);
-                }}
-                value={emailAddress}
-                className="mr-3
-                        w-full appearance-none border-b border-gray-800 bg-transparent p-4 leading-tight text-gray-700
-                        focus:bg-gray-200 focus:outline-none"
-                type="email"
-                placeholder="example@exp.com"
-                aria-label="Full name"
-              />
-            </div>
-          </div>
-          <div className="-mx-3 mb-1 flex flex-wrap">
-            <div className="w-full px-3">
-              <label
-                className="my-5 mb-1 block text-xs uppercase tracking-wide text-gray-700"
-                htmlFor="grid-message-content"
-              >
-                Wiadomość
-              </label>
-              <textarea
-                onChange={(e) => {
-                  setMessageContent(e.target.value);
-                }}
-                value={messageContent}
-                rows={6}
-                className="mr-3 w-full appearance-none border-b border-gray-800 bg-transparent p-4 leading-tight text-gray-700 focus:bg-gray-200 focus:outline-none"
-                placeholder="Twoja wiadomość."
-                aria-label="Full name"
-              ></textarea>
-            </div>
-            <div className="flex w-full justify-between px-3">
-              <div className="md:flex md:items-center"></div>
-              <button
-                onClick={(e) => {
-                  handleSubmit(e);
-                }}
-                id="contact-submit"
-                className="focus:shadow-outline my-2 bg-brandNavy-500 py-1.5 px-5
-                text-white shadow transition ease-linear hover:bg-brandNavy-100 focus:outline-none"
-                type="submit"
-              >
-                Wyślij
-              </button>
-            </div>
-          </div>
-        </form>
-        <Dialog
-          className="relative z-50 flex"
-          open={isOpen}
-          onClose={() => setIsOpen(false)}
-        >
-          <div className="fixed inset-0 bg-black/30" aria-hidden="true"></div>
-          <div className="fixed inset-0 flex items-center justify-center p-4">
-            <Dialog.Panel className="mx-auto max-w-sm rounded bg-gray-50 p-6 shadow-xl">
-              <Dialog.Title className="py-2">
-                ✉️ Wiadomość wysłana!
-              </Dialog.Title>
-              <Dialog.Description>
-                <p>Dziękujemy za kontakt. Odezwiemy się jak najszybciej!</p>
-                <div className="flex pt-3 text-sm">
-                  <p className="">Zespół Truul</p>
-                  <p className="text-brandLightPurple-500">o</p>
+    <>
+      <section id="kontakt" className="contact-section">
+        <div className="mt-8 flex items-center justify-center px-3 py-6 md:mt-0">
+          <div className="mx-auto text-gray-50">
+            <div className="flex flex-col gap-y-4 text-xl md:text-3xl">
+              <p className="font-semibold">_opiekun klienta</p>
+              <div className="mt-2 flex flex-row">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="mr-2 h-7 w-7 md:h-10 md:w-10"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <p>Krzysztof Chmielewski</p>
+              </div>
+              <div className="flex flex-row">
+                {/* <button onClick={() => handleCopy()}>
+                  k.chmielewskimail@gmail.com
+                </button> */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="mr-2 h-7 w-7 md:h-10 md:w-10"
+                >
+                  <path
+                    strokeLinecap="round"
+                    d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25"
+                  />
+                </svg>
+                <div>
+                  <Popover>
+                    <CopyToClipboard text="k.chmielewskimail@gmail.com">
+                      <Popover.Button onClick={() => handleCopy()}>
+                        k.chmielewskimail@gmail.com
+                      </Popover.Button>
+                    </CopyToClipboard>
+                    <Transition
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Popover.Panel>
+                        <span className="text-sm">
+                          Adres e-mail skopiowany!
+                        </span>
+                      </Popover.Panel>
+                    </Transition>
+                  </Popover>
                 </div>
-              </Dialog.Description>
-              <button
-                className="relative mt-4 justify-items-end rounded bg-emerald-600 py-1 px-2 text-sm text-gray-50 transition ease-linear hover:bg-emerald-500"
-                onClick={() => setIsOpen(false)}
-              >
-                Okay ✔️
-              </button>
-            </Dialog.Panel>
+              </div>
+            </div>
           </div>
-        </Dialog>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }

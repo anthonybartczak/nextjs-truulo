@@ -31,7 +31,7 @@ export default function DemoModal(props: any) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="flex h-1/2 w-full transform flex-col overflow-hidden rounded-xl bg-brandNavy-300 p-3 text-left align-middle shadow-xl transition-all md:w-1/2 md:p-5">
+                <Dialog.Panel className="flex h-1/2 w-full transform flex-col overflow-hidden rounded-xl bg-brandNavy-300 p-3 text-left align-middle shadow-xl transition-all md:w-1/2 md:p-3">
                   <div className="hidden md:block">
                     <button
                       type="button"

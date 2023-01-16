@@ -26,20 +26,20 @@ export default function Projects() {
         <h1 className="text-3xl font-semibold md:text-3xl">
           _sprawdź co zyskasz
         </h1>
-        <ol className="section-paragraph !text-left">
+        <ol className="section-paragraph list-inside list-decimal !text-left xs:!text-sm md:!text-2xl">
           <li className="hover-underline-animation py-2">
-            1. Pomożemy Ci wybrać odpowiedni format wideo do promocji twojej
+            Pomożemy Ci wybrać odpowiedni format wideo do promocji twojej
             inwestycji.
           </li>
           <li className="hover-underline-animation py-2">
-            2. Stworzymy wysokiej jakości spoty wideo.
+            Stworzymy wysokiej jakości spoty wideo.
           </li>
           <li className="hover-underline-animation py-2">
-            3. Przygotujemy je różnych formatach w zależności od miejsca ich
+            Przygotujemy je różnych formatach w zależności od miejsca ich
             prezentacji.
           </li>
           <li className="hover-underline-animation py-2">
-            4. Doradzimy Ci w wyborze strategii marketingowej dla Twojego wideo.
+            Doradzimy Ci w wyborze strategii marketingowej dla Twojego wideo.
           </li>
         </ol>
       </motion.div>
