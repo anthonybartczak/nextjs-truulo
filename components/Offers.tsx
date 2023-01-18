@@ -35,7 +35,7 @@ export default function Offers() {
         </Link>
         <Link href="#demo" passHref>
           <button className="mt-4 rounded-md bg-brandDarkBlue-300 bg-opacity-20 py-1 px-2 shadow-md transition ease-linear hover:scale-105">
-            <span className="text-lg">Zobacz nasze demo</span>
+            <span className="text-lg">Zobacz nasze portfolio</span>
           </button>
         </Link>
       </motion.div>
