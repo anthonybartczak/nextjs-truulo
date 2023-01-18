@@ -15,7 +15,7 @@ export default function Contact(this: any) {
       <section id="kontakt" className="contact-section">
         <div className="mt-8 flex items-center justify-center px-3 py-6 md:mt-0">
           <div className="mx-auto text-gray-50">
-            <div className="flex flex-col gap-y-4 text-xl md:text-3xl">
+            <div className="flex flex-col gap-y-4 text-xl md:text-2xl">
               <p className="font-semibold">_opiekun klienta</p>
               <div className="mt-2 flex flex-row">
                 <svg

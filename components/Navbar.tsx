@@ -7,7 +7,7 @@ import { useState } from "react";
 const navigation = [
   { name: "O NAS", href: "#o-nas", current: false },
   { name: "OFERTA", href: "#oferta", current: false },
-  { name: "DEMO", href: "#demo", current: false },
+  { name: "PORTFOLIO", href: "#demo", current: false },
   { name: "CO ZYSKASZ", href: "#realizacje", current: false },
   { name: "KONTAKT", href: "#kontakt", current: false },
 ];
@@ -109,7 +109,7 @@ export default function Navbar() {
                     <Link href="#oferta">_oferta</Link>
                   </li>
                   <li className="nav-link">
-                    <Link href="#demo">_demo</Link>
+                    <Link href="#demo">_portfolio</Link>
                   </li>
                   <li className="nav-link">
                     <Link href="#realizacje">_co zyskasz</Link>

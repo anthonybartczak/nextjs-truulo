@@ -26,7 +26,7 @@ export default function Projects() {
         <h1 className="text-3xl font-semibold md:text-3xl">
           _sprawdź co zyskasz
         </h1>
-        <ol className="section-paragraph list-inside list-decimal !text-left xs:!text-sm md:!text-2xl">
+        <ol className="section-paragraph list-inside list-decimal !text-left xs:!text-sm md:!text-xl">
           <li className="hover-underline-animation py-2">
             Pomożemy Ci wybrać odpowiedni format wideo do promocji twojej
             inwestycji.

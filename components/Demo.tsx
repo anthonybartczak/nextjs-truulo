@@ -25,7 +25,7 @@ export default function Demo() {
         />
       </div>
       <div className="relative z-20 my-auto flex flex-col justify-center gap-3 rounded-md bg-brandNavy-300 p-8 shadow-xl md:p-24">
-        <h2 className="text-3xl text-gray-50">Zobacz nasze demo</h2>
+        <h2 className="text-3xl text-gray-50">Zobacz nasze portfolio</h2>
         <button
           onClick={() => setModalOpen(true)}
           className="rounded-md bg-brandDarkBlue-100 bg-opacity-20 p-1 uppercase text-gray-50 transition ease-linear hover:scale-105"

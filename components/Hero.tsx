@@ -25,7 +25,7 @@ export default function Hero() {
             className="pt-6 text-justify text-xl text-gray-50"
           >
             <p>
-              W Trullo rozumiemy, że biznes wymaga dziś kreatywnego podejścia do
+              W Trullo rozumiemy, że obecnie biznes wymaga kreatywnego podejścia do
               komunikacji z klientem. Spot wideo to doskonałe narzędzie
               marketingowe i sprzedażowe. Tworzymy nowoczesne formy filmowe
               wspierające proces sprzedaży nieruchomości.

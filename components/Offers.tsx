@@ -26,7 +26,7 @@ export default function Offers() {
       >
         <h1 className="text-3xl font-semibold md:text-3xl">_oferta</h1>
         <p className="section-paragraph md:!text-xl">
-          Poznaj naszą ofertę lub napisz do nas jak możemy Ci pomóc.
+          Poznaj naszą ofertę i napisz do nas w czym możemy Ci pomóc.
         </p>
         <Link href="" passHref>
           <button className="mt-4 rounded-md bg-brandDarkBlue-300 bg-opacity-20 py-1 px-2 shadow-md transition ease-linear hover:scale-105">
